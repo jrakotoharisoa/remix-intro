@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { Deck, FlexBox, Heading, Quote } from 'spectacle';
+import { Template } from './theme/Template';
+import { theme } from './theme/config';
+import { Slide } from './theme/Slide';
+import remixLogo from './images/remix-logo.svg';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Deck theme={theme} template={<Template />}>
+      <Slide>
+        <FlexBox
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          height="100%"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <div>
+            <img width="800" src={remixLogo} alt="remix logo" />
+          </div>
+          <Heading>Introduction</Heading>
+        </FlexBox>
+      </Slide>
+      <Slide>
+        <FlexBox justifyContent="center" alignItems="center" height="100%">
+          <Quote>Get better at Remix, accidentally get better at the web</Quote>
+        </FlexBox>
+      </Slide>
+    </Deck>
   );
-}
-
+};
 export default App;
