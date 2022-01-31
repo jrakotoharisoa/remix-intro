@@ -1,23 +1,9 @@
 import { Quote } from '../theme/Quote';
 import { CenteredSlide } from '../theme/Slide';
 
-const transition = {
-  from: {
-    opacity: 0,
-    transform: 'rotate(45deg)',
-  },
-  enter: {
-    opacity: 1,
-    transform: 'rotate(0)',
-  },
-  leave: {
-    opacity: 0,
-    transform: 'rotate(315deg)',
-  },
-};
 export const RemixQuote = () => {
   return (
-    <CenteredSlide transition={transition}>
+    <CenteredSlide>
       <Quote source="https://remix.run">
         Remix is a{' '}
         <span className="text-blue-400">full stack web framework</span> that

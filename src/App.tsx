@@ -1,4 +1,4 @@
-import { Deck, FlexBox, Heading, Quote, Text } from 'spectacle';
+import { Deck, FlexBox, Heading, OrderedList, Quote, Text } from 'spectacle';
 import { Template } from './theme/Template';
 import { theme } from './theme/config';
 import { CenteredSlide, Slide } from './theme/Slide';
@@ -17,12 +17,12 @@ const App = () => {
       <RemixQuote />
       <Myself />
       <Slide>
-        <Heading>Summary</Heading>
-        <ul>
-          <li>What's remix ?</li>
+        <Heading color="yellow">What are we talking about ? </Heading>
+        <OrderedList color="white">
+          <li>What's Remix ?</li>
           <li>Remix philosophy</li>
-          <li>How remix take care of of UX</li>
-        </ul>
+          <li>How remix take care of User experience</li>
+        </OrderedList>
       </Slide>
       <CenteredSlide>
         <Heading>Remix, what is it ?</Heading>
