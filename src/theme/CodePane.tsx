@@ -33,7 +33,7 @@ const Container = styled.div`
 `;
 
 export const Code: React.FC<CodePaneProps> = (props) => (
-  <Container className={props.className}>
+  <Container className={`overflow-hidden ${props.className}`}>
     <CodePane {...props} />
   </Container>
 );

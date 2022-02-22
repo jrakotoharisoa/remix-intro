@@ -6,11 +6,7 @@ export const Myself = () => (
   <Slide>
     <div className="m-auto w-1/2 space-y-12 overflow-hidden text-center">
       <img className="m-auto w-48 rounded-full" src={me} alt="me" />
-      <Code
-        language="typescript"
-        showLineNumbers
-        highlightRanges={[[1], [3, 5]]}
-      >
+      <Code language="typescript" showLineNumbers>
         {`
       const me = {
         name: 'Johann Rakotoharisoa',

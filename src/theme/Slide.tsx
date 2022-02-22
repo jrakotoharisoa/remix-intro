@@ -1,4 +1,4 @@
-import { Slide as SpectacleSlide } from 'spectacle';
+import { FlexBox, Slide as SpectacleSlide } from 'spectacle';
 export const Slide: React.FC = ({ children, ...props }) => (
   <SpectacleSlide backgroundColor="darkGray" {...props}>
     {children}
@@ -7,8 +7,13 @@ export const Slide: React.FC = ({ children, ...props }) => (
 
 export const CenteredSlide: React.FC = ({ children, ...props }) => (
   <Slide {...props}>
-    <div className="flex h-full flex-col items-center justify-center">
+    <FlexBox
+      alignItems="center"
+      flexDirection="column"
+      justifyContent="center"
+      height="100%"
+    >
       {children}
-    </div>
+    </FlexBox>
   </Slide>
 );
