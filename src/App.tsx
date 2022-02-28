@@ -1,4 +1,4 @@
-import { Deck, FlexBox, Heading, Quote, Text } from 'spectacle';
+import { Deck, Heading } from 'spectacle';
 import remixLogo from './images/remix-logo.svg';
 import { FrontEnd } from './slides/FrontEnd';
 import { Myself } from './slides/Myself';
@@ -6,10 +6,12 @@ import { RemixPresentation } from './slides/RemixPresentation';
 import { RemixProjectStructure } from './slides/RemixProjectStrucutre';
 import { RemixQuote } from './slides/RemixQuote';
 import { RemixStartProject } from './slides/RemixStartProject';
+import { RemixSummary } from './slides/RemixSummary';
 import { RoutesAPI } from './slides/RouteAPI';
 import { theme } from './theme/config';
-import { CenteredSlide, Slide } from './theme/Slide';
+import { CenteredSlide } from './theme/Slide';
 import { Template } from './theme/Template';
+
 const App = () => {
   return (
     <Deck
@@ -40,40 +42,7 @@ const App = () => {
       <RemixProjectStructure />
       <RoutesAPI />
       <FrontEnd />
-      <CenteredSlide>
-        {/* Resumé */}
-        <Heading>Remix, what is it ?</Heading>
-        <ul>
-          <li>A compiler</li>
-          <li>A server side HTTP handler</li>
-          <li>A server framework</li>
-          <li>A browser framework</li>
-        </ul>
-      </CenteredSlide>
-      <Slide>
-        <Text>Remix philosophy</Text>
-        <ul>
-          <li>Server/client model</li>
-          <li>Web standards, HTTP and HTML</li>
-          <li>Progressive enhancement</li>
-          <li>Don't over abstract</li>
-        </ul>
-      </Slide>
-      <Slide>
-        <Heading>Progressive enhancement</Heading>
-      </Slide>
-      <Slide>
-        <Heading>what about UX ?</Heading>
-        <Quote>
-          Focused on web fundamentals and modern UX, you’re simply going to
-          build better websites
-        </Quote>
-      </Slide>
-      <Slide>
-        <FlexBox justifyContent="center" alignItems="center" height="100%">
-          <Quote>Get better at Remix, accidentally get better at the web</Quote>
-        </FlexBox>
-      </Slide>
+      <RemixSummary />
     </Deck>
   );
 };

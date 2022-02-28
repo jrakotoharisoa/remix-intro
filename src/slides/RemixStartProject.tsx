@@ -26,9 +26,6 @@ export const RemixStartProject = () => {
                 <br /> instead of Node.js{' '}
               </Text>
             </Appear>
-            <Appear tagName="span" className="align-text-bottom">
-              <Badge type="WEB" className="text-normal inline  self-center" />
-            </Appear>
           </FlexBox>
         </div>
       </CenteredSlide>

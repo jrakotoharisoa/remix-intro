@@ -28,6 +28,12 @@ export const RemixPresentation = () => {
 const TransitionalApp = () => (
   <>
     <CenteredSlide>
+      <div className="flex space-x-10">
+        <img src={nextLogo} alt="nextjs" width="300px" />
+        <img src={svelteKit} alt="svelteKit" width="300px" />
+      </div>
+    </CenteredSlide>
+    <CenteredSlide>
       <Quote source="https://kit.svelte.dev/">
         All the <span className="text-blue-400">SEO</span> and{' '}
         <span className="text-blue-400">progressive enhancement</span> of a{' '}
@@ -35,12 +41,6 @@ const TransitionalApp = () => (
         <span className="text-green-400">slick navigation</span> of an{' '}
         <span className="text-green-400">SPA</span>
       </Quote>
-    </CenteredSlide>
-    <CenteredSlide>
-      <div className="flex space-x-10">
-        <img src={nextLogo} alt="nextjs" width="300px" />
-        <img src={svelteKit} alt="svelteKit" width="300px" />
-      </div>
     </CenteredSlide>
   </>
 );

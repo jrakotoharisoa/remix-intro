@@ -1,8 +1,7 @@
-import { Appear, Grid, Heading, Text } from 'spectacle';
+import { Appear, Heading, Text } from 'spectacle';
 import { Code } from '../theme/CodePane';
 import { Quote } from '../theme/Quote';
 import { CenteredSlide } from '../theme/Slide';
-import { Badge } from './RemixSummary';
 import blank from '../images/blank.png';
 import index from '../images/index.png';
 import list from '../images/list.png';
@@ -11,10 +10,7 @@ import form from '../images/form.png';
 export const RoutesAPI = () => (
   <>
     <CenteredSlide>
-      <Badge type="UI" />
-      <Appear>
-        <Heading>ROUTES</Heading>
-      </Appear>
+      <Heading class="yellow">ROUTES</Heading>
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="yellow">ROUTER</Heading>
@@ -29,12 +25,12 @@ export const RoutesAPI = () => (
       </Appear>
     </CenteredSlide>
     <CenteredSlide>
-      <Text>https://comet-meeting.com/rooms/room-42</Text>
+      <Text>https://comet-meetings.com/rooms/room-42</Text>
       <img src={blank} alt="blank" className="w-1/3" />
     </CenteredSlide>
     <CenteredSlide>
       <Text>
-        <span className="text-blue-400">https://comet-meeting.com</span>
+        <span className="text-blue-400">https://comet-meetings.com</span>
         /rooms/room-42
       </Text>
       <Text color="blue">app/routes/root.tsx</Text>
@@ -42,15 +38,15 @@ export const RoutesAPI = () => (
     </CenteredSlide>
     <CenteredSlide>
       <Text>
-        https://comet-meeting.com<span className="text-green-400">/rooms</span>
+        https://comet-meetings.com<span className="text-green-400">/rooms</span>
         /room-42
       </Text>
-      <Text color="green">app/routes/rooms/index.tsx</Text>
+      <Text color="green">app/routes/rooms.tsx</Text>
       <img src={list} alt="list" className="w-1/3" />
     </CenteredSlide>
     <CenteredSlide>
       <Text>
-        https://comet-meeting.com/rooms
+        https://comet-meetings.com/rooms
         <span className="text-yellow-400">/room-42</span>
       </Text>
       <Text color="yellow">app/routes/rooms/$roomId.tsx</Text>
@@ -66,36 +62,36 @@ export const RoutesAPI = () => (
       <div className="w-2/3">{view}</div>
     </CenteredSlide>
     <CenteredSlide>
-      <Text>Data loading</Text>
-      {dataLoading}
+      <Text>Meta per route</Text>
+      {meta}
     </CenteredSlide>
     <CenteredSlide>
-      <Text>Data writing</Text>
-      {dataWriting}
+      <Heading color="white">🏆 SEO</Heading>
     </CenteredSlide>
     <CenteredSlide>
       <Text>Styles per route</Text>
       {css}
     </CenteredSlide>
     <CenteredSlide>
+      <Text>Data loading</Text>
+      {dataLoading}
+    </CenteredSlide>
+    <CenteredSlide>
+      <Heading color="white">⚡️ Faster loading</Heading>
+    </CenteredSlide>
+    <CenteredSlide>
       <Text>Error handling per route</Text>
       {error}
     </CenteredSlide>
     <CenteredSlide>
-      <Grid gridTemplateColumns="1fr 1fr">
-        <Appear>
-          <Heading color="blue">{'SEO'}</Heading>
-        </Appear>
-        <Appear>
-          <Heading color="green">{'Fast'}</Heading>
-        </Appear>
-        <Appear>
-          <Heading color="yellow">{'Progressive enhancement'}</Heading>
-        </Appear>
-        <Appear>
-          <Heading color="red">{'Resilient'}</Heading>
-        </Appear>
-      </Grid>
+      <Heading color="white">💪 Resilient</Heading>
+    </CenteredSlide>
+    <CenteredSlide>
+      <Text>Data writing</Text>
+      {dataWriting}
+    </CenteredSlide>
+    <CenteredSlide>
+      <Heading color="white">↗️ Progressive enhancement</Heading>
     </CenteredSlide>
   </>
 );
@@ -174,6 +170,21 @@ export function ErrorBoundary() {
     </div>
   );
 }>
+  `}
+  </Code>
+);
+const meta = (
+  <Code language="tsx">
+    {`// app/routes/rooms/$roomId/index.tsx
+import type { MetaFunction } from "remix";
+
+export const meta: MetaFunction = () => {
+   const { roomId } = useParams();
+  return {
+    title: \`Room \${roomId}\`,
+    description: \`Description of the \${roomId} room\`,
+  };
+};
   `}
   </Code>
 );
