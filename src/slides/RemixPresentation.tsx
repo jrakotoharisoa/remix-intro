@@ -1,19 +1,10 @@
 import { FlexBox, Heading, Stepper, Text } from 'spectacle';
 import helloKent from '../images/hello-kent.gif';
 import MJ from '../images/michael_jackson.jpeg';
-import nextLogo from '../images/nextjs-logo.svg';
 import ossc from '../images/ossc.png';
 import RF from '../images/ryan_florence.jpeg';
-import svelteKit from '../images/svelte-kit-logo.svg';
+import { Quote } from '../theme/Quote';
 import { CenteredSlide } from '../theme/Slide';
-export const RemixAlternatives = () => (
-  <CenteredSlide>
-    <div className="flex space-x-10">
-      <img src={nextLogo} alt="nextjs" width="300px" />
-      <img src={svelteKit} alt="svelteKit" width="300px" />
-    </div>
-  </CenteredSlide>
-);
 
 export const RemixPresentation = () => {
   return (
@@ -23,26 +14,6 @@ export const RemixPresentation = () => {
     </>
   );
 };
-
-// const TransitionalApp = () => (
-//   <>
-//     <CenteredSlide>
-//       <Quote source="https://kit.svelte.dev/">
-//         All the <span className="text-blue-400">SEO</span> and{' '}
-//         <span className="text-blue-400">progressive enhancement</span> of a{' '}
-//         <span className="text-blue-400">server-rendered app</span>, with the{' '}
-//         <span className="text-green-400">slick navigation</span> of an{' '}
-//         <span className="text-green-400">SPA</span>
-//       </Quote>
-//     </CenteredSlide>
-//     <CenteredSlide>
-//       <div className="flex space-x-10">
-//         <img src={nextLogo} alt="nextjs" width="300px" />
-//         <img src={svelteKit} alt="svelteKit" width="300px" />
-//       </div>
-//     </CenteredSlide>
-//   </>
-// );
 
 const History = () => (
   <>

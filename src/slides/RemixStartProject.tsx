@@ -29,22 +29,6 @@ export const RemixStartProject = () => {
           </FlexBox>
         </div>
       </CenteredSlide>
-      <CenteredSlide>
-        <Heading>Express sample</Heading>
-        <div className="w-2/3">
-          <Code language="typescript" highlightRanges={[[2], [6, 9]]}>
-            {`const express = require("express");
-const remix = require("@remix-run/express");
-
-const app = express();
-
-app.all(
-  "*",
-  remix.createRequestHandler({ build: require("./build") });
-);`}
-          </Code>
-        </div>
-      </CenteredSlide>
     </>
   );
 };
