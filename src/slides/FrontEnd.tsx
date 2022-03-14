@@ -10,16 +10,16 @@ export const FrontEnd = () => (
     <CenteredSlide>
       <div className="w-2/3">
         <Code language="tsx">{`// entry.client.tsx
-import { hydrate } from "react-dom";
-import { RemixBrowser } from "remix";
+import ReactDOM from "react-dom";
+import Remix from "@remix-run/react/browser";
 
-hydrate(<RemixBrowser />, document);`}</Code>
+ReactDOM.hydrate(<Remix />, document);`}</Code>
       </div>
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="blue">{'<Link />'}</Heading>
       <div className="w-2/3">
-        <Code language="tsx" highlightRanges={[[4, 5], 7]}>
+        <Code language="tsx">
           {`
 <>
   <Link /> // defaults to "none"
@@ -27,7 +27,7 @@ hydrate(<RemixBrowser />, document);`}</Code>
   <Link prefetch="intent" to="..."/>
   <Link prefetch="render" to="..."/>
 </>
-// <link rel="prefetch" href="...">...</link>
+// <a rel="prefetch" href="...">...</link>
 `}
         </Code>
       </div>
@@ -53,7 +53,7 @@ hydrate(<RemixBrowser />, document);`}</Code>
         Modern UX with <span className="text-blue-400">useTransition()</span>
       </Heading>
       <div className="w-2/3">
-        <Code language="tsx" highlightRanges={[[5], [7]]}>
+        <Code language="tsx" highlightRanges={[[7], [5]]}>
           {`import { useTransition } from "remix";
 
 function RoomEdit() {
@@ -68,7 +68,7 @@ function RoomEdit() {
       </div>
     </CenteredSlide>
     <CenteredSlide>
-      <Heading>Normal navitation</Heading>
+      <Heading>Normal navigation</Heading>
       <div className="w-2/3">
         <Code language="tsx" showLineNumbers={false}>
           {` idle → loading → idle`}

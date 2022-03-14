@@ -5,7 +5,6 @@ import nextLogo from '../images/nextjs-logo.svg';
 import ossc from '../images/ossc.png';
 import RF from '../images/ryan_florence.jpeg';
 import svelteKit from '../images/svelte-kit-logo.svg';
-import { Quote } from '../theme/Quote';
 import { CenteredSlide } from '../theme/Slide';
 export const RemixAlternatives = () => (
   <CenteredSlide>
@@ -19,31 +18,31 @@ export const RemixAlternatives = () => (
 export const RemixPresentation = () => {
   return (
     <>
-      <TransitionalApp />
+      {/* <TransitionalApp /> */}
       <History />
     </>
   );
 };
 
-const TransitionalApp = () => (
-  <>
-    <CenteredSlide>
-      <div className="flex space-x-10">
-        <img src={nextLogo} alt="nextjs" width="300px" />
-        <img src={svelteKit} alt="svelteKit" width="300px" />
-      </div>
-    </CenteredSlide>
-    <CenteredSlide>
-      <Quote source="https://kit.svelte.dev/">
-        All the <span className="text-blue-400">SEO</span> and{' '}
-        <span className="text-blue-400">progressive enhancement</span> of a{' '}
-        <span className="text-blue-400">server-rendered app</span>, with the{' '}
-        <span className="text-green-400">slick navigation</span> of an{' '}
-        <span className="text-green-400">SPA</span>
-      </Quote>
-    </CenteredSlide>
-  </>
-);
+// const TransitionalApp = () => (
+//   <>
+//     <CenteredSlide>
+//       <Quote source="https://kit.svelte.dev/">
+//         All the <span className="text-blue-400">SEO</span> and{' '}
+//         <span className="text-blue-400">progressive enhancement</span> of a{' '}
+//         <span className="text-blue-400">server-rendered app</span>, with the{' '}
+//         <span className="text-green-400">slick navigation</span> of an{' '}
+//         <span className="text-green-400">SPA</span>
+//       </Quote>
+//     </CenteredSlide>
+//     <CenteredSlide>
+//       <div className="flex space-x-10">
+//         <img src={nextLogo} alt="nextjs" width="300px" />
+//         <img src={svelteKit} alt="svelteKit" width="300px" />
+//       </div>
+//     </CenteredSlide>
+//   </>
+// );
 
 const History = () => (
   <>
@@ -81,7 +80,7 @@ const History = () => (
           <img src={helloKent} alt="hello kent" />,
           <>
             <Heading>🎉 REMIX V1</Heading>
-            <Text textAlign="center">MIT LICENCE</Text>
+            <Text textAlign="center">MIT LICENSE</Text>
           </>,
         ]}
       >

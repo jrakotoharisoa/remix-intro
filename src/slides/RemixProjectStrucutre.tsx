@@ -1,7 +1,10 @@
 import { Code } from '../theme/CodePane';
 import { CenteredSlide } from '../theme/Slide';
 
-const steps = [11, [2, 7], 3, 4, 5, [6, 7]];
+const steps = [
+  [2, 7],
+  [6, 7],
+];
 export const RemixProjectStructure = () => (
   <CenteredSlide>
     <div className="w-2/3">

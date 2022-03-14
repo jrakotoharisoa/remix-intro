@@ -4,7 +4,7 @@ import { Quote } from '../theme/Quote';
 import { CenteredSlide } from '../theme/Slide';
 import blank from '../images/blank.png';
 import index from '../images/index.png';
-import list from '../images/list.png';
+import layout from '../images/layout.png';
 import form from '../images/form.png';
 
 export const RoutesAPI = () => (
@@ -30,10 +30,10 @@ export const RoutesAPI = () => (
     </CenteredSlide>
     <CenteredSlide>
       <Text>
-        <span className="text-blue-400">https://comet-meetings.com</span>
-        /rooms/room-42
+        <span className="text-blue-400">https://comet-meetings.com/</span>
+        rooms/room-42
       </Text>
-      <Text color="blue">app/routes/root.tsx</Text>
+      <Text color="blue">app/root.tsx</Text>
       <img src={index} alt="index" className="w-1/3" />
     </CenteredSlide>
     <CenteredSlide>
@@ -42,8 +42,9 @@ export const RoutesAPI = () => (
         /room-42
       </Text>
       <Text color="green">app/routes/rooms.tsx</Text>
-      <img src={list} alt="list" className="w-1/3" />
+      <img src={layout} alt="layout" className="w-1/3" />
     </CenteredSlide>
+
     <CenteredSlide>
       <Text>
         https://comet-meetings.com/rooms
@@ -98,7 +99,7 @@ export const RoutesAPI = () => (
 
 const view = (
   <Code language="tsx">
-    {`// app/index.tsx 
+    {`// app/routes/index.tsx 
 export default function() { 
   return <h1>Hello Devoxx !</h1>;
 }`}
@@ -106,11 +107,14 @@ export default function() {
 );
 
 const dataLoading = (
-  <Code language="tsx" highlightRanges={[[2, 5], 8]}>
+  <Code language="tsx" highlightRanges={[[5, 8], 11]}>
     {`// app/routes/rooms/index.tsx
+import { json, useLoaderData } from "remix";
+import type { LoaderFunction } from "remix";
+
 export const loader: LoaderFunction = async ({ request }) =>  {
   const rooms = await getRooms();
-  return { rooms };
+  return json({ rooms });
 }
 
 export default function() {
@@ -125,7 +129,7 @@ export default function() {
 );
 
 const dataWriting = (
-  <Code language="tsx" highlightRanges={[[13, 16], 3, [4, 8], 8]}>
+  <Code language="tsx" highlightRanges={[[12, 15], 3, [4, 7], 8]}>
     {`// app/routes/rooms/$roomId/book.tsx 
 export const action:Action = ({ request, params }) => {
   const form = await request.formData();
@@ -136,14 +140,12 @@ export const action:Action = ({ request, params }) => {
   return redirect("/rooms");
 }
 
-export default function() {
- return (
+export default () => (
    <form method="post">
     <input type="date" name="date" />
     <button type="submit">Book</button>
    </form>
- );
-}`}
+ );`}
   </Code>
 );
 
@@ -162,7 +164,7 @@ export const links = () => {
 const error = (
   <Code language="tsx">
     {`// app/routes/rooms/$roomId/index.tsx
-export function ErrorBoundary() {
+export const ErrorBoundary = () => {
   const { roomId } = useParams();
   return (
     <div className="error-container">
