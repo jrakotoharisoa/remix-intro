@@ -1,8 +1,7 @@
-import { Appear, FlexBox, Heading, Text } from 'spectacle';
+import { Appear, FlexBox, Text } from 'spectacle';
 import { CenteredSlide } from '../theme/Slide';
 import remixPlatforms from '../images/remix-platforms.png';
 import { Code } from '../theme/CodePane';
-import { Badge } from './RemixSummary';
 
 export const RemixStartProject = () => {
   return (

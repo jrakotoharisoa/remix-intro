@@ -3,7 +3,6 @@ import helloKent from '../images/hello-kent.gif';
 import MJ from '../images/michael_jackson.jpeg';
 import ossc from '../images/ossc.png';
 import RF from '../images/ryan_florence.jpeg';
-import { Quote } from '../theme/Quote';
 import { CenteredSlide } from '../theme/Slide';
 
 export const RemixPresentation = () => {

@@ -21,7 +21,7 @@ export const RoutesAPI = () => (
         <Text textAlign="center">Built on top of React-router</Text>
       </Appear>
       <Appear>
-        <Text textAlign="center">Nested routes</Text>
+        <Text textAlign="center">Nested routes with nested layout</Text>
       </Appear>
     </CenteredSlide>
     <CenteredSlide>
@@ -180,11 +180,14 @@ const meta = (
     {`// app/routes/rooms/$roomId/index.tsx
 import type { MetaFunction } from "remix";
 
-export const meta: MetaFunction = () => {
-   const { roomId } = useParams();
+export const meta: MetaFunction = ({ data }: { data: LoaderData | undefined; }) => {
+  if(!data) {
+    return;
+  }
+
   return {
-    title: \`Room \${roomId}\`,
-    description: \`Description of the \${roomId} room\`,
+    title: \`Room \${data.room.name}\`,
+    description: \`Description of the \${data.room.name} room\`,
   };
 };
   `}
