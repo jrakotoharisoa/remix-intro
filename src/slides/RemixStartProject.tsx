@@ -1,18 +1,17 @@
 import { Appear, FlexBox, Text } from 'spectacle';
 import { CenteredSlide } from '../theme/Slide';
 import remixPlatforms from '../images/remix-platforms.png';
-import { Code } from '../theme/CodePane';
 
 export const RemixStartProject = () => {
   return (
     <>
-      <CenteredSlide>
+      {/* <CenteredSlide>
         <div className="w-2/3">
           <Code language="typescript" className="mb-3" showLineNumbers={false}>
             $ npx create-remix@latest
           </Code>
         </div>
-      </CenteredSlide>
+      </CenteredSlide> */}
       <CenteredSlide>
         <div className="w-2/3">
           <img src={remixPlatforms} alt="screenshot remix platform" />

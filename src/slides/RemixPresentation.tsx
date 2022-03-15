@@ -40,22 +40,12 @@ const History = () => (
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="green">End of 2021</Heading>
-      <Stepper
-        alwaysVisible
-        values={[
-          <>
-            <Heading>Seed funding: $3M </Heading>
-            <img src={ossc} alt="ossc" className="m-auto w-1/3" />
-          </>,
-          <img src={helloKent} alt="hello kent" />,
-          <>
-            <Heading>🎉 REMIX V1</Heading>
-            <Text textAlign="center">MIT LICENSE</Text>
-          </>,
-        ]}
-      >
-        {(value: any) => value}
-      </Stepper>
+      <img src={helloKent} alt="hello kent" />
+    </CenteredSlide>
+    <CenteredSlide>
+      <Heading color="green">End of 2021</Heading>
+      <Heading>🎉 REMIX V1</Heading>
+      <Text textAlign="center">MIT LICENSE</Text>
     </CenteredSlide>
   </>
 );

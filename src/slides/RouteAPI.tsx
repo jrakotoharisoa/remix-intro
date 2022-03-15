@@ -63,29 +63,35 @@ export const RoutesAPI = () => (
       <div className="w-2/3">{view}</div>
     </CenteredSlide>
     <CenteredSlide>
-      <Text>Meta per route</Text>
-      {meta}
-    </CenteredSlide>
-    <CenteredSlide>
-      <Heading color="white">🏆 SEO</Heading>
-    </CenteredSlide>
-    <CenteredSlide>
-      <Text>Styles per route</Text>
-      {css}
-    </CenteredSlide>
-    <CenteredSlide>
       <Text>Data loading</Text>
       {dataLoading}
     </CenteredSlide>
     <CenteredSlide>
-      <Heading color="white">⚡️ Faster loading</Heading>
+      <Heading color="white">Data and view co-location 📍</Heading>
     </CenteredSlide>
     <CenteredSlide>
-      <Text>Error handling per route</Text>
+      <Heading color="white">
+        Parallel loaders execution = ⚡️ Faster loading
+      </Heading>
+    </CenteredSlide>
+    <CenteredSlide>
+      <Text>Metadata</Text>
+      {meta}
+    </CenteredSlide>
+    <CenteredSlide>
+      <Heading color="white">SSR + Metadata = 🏆 SEO</Heading>
+    </CenteredSlide>
+    {/* <CenteredSlide>
+      <Text>Styles per route</Text>
+      {css}
+    </CenteredSlide> */}
+
+    <CenteredSlide>
+      <Text>Error handling</Text>
       {error}
     </CenteredSlide>
     <CenteredSlide>
-      <Heading color="white">💪 Resilient</Heading>
+      <Heading color="white">💪 Resilient UI</Heading>
     </CenteredSlide>
     <CenteredSlide>
       <Text>Data writing</Text>
@@ -149,17 +155,17 @@ export default () => (
   </Code>
 );
 
-const css = (
-  <Code language="typescript">
-    {` // app/routes/rooms/index.tsx
-import styles from "~/styles/rooms.css";
+// const css = (
+//   <Code language="typescript">
+//     {`// app/routes/rooms/index.tsx
+// import styles from "~/styles/rooms.css";
 
-export const links = () => {
-  return [{ rel: "stylesheet", href: styles }];
-}
-    `}
-  </Code>
-);
+// export const links = () => {
+//   return [{ rel: "stylesheet", href: styles }];
+// }
+//     `}
+//   </Code>
+// );
 
 const error = (
   <Code language="tsx">
