@@ -67,11 +67,13 @@ export const RoutesAPI = () => (
       {dataLoading}
     </CenteredSlide>
     <CenteredSlide>
-      <Heading color="white">Data and view co-location 📍</Heading>
+      <Heading color="white">
+        📍Co-location of <br /> Data loading and view
+      </Heading>
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="white">
-        Parallel loaders execution = ⚡️ Faster loading
+        Parallel loaders execution <br /> = ⚡️ Faster loading
       </Heading>
     </CenteredSlide>
     <CenteredSlide>
@@ -104,31 +106,40 @@ export const RoutesAPI = () => (
 );
 
 const view = (
-  <Code language="tsx">
-    {`// app/routes/index.tsx 
-export default function() { 
-  return <h1>Hello Devoxx !</h1>;
-}`}
+  <Code language="tsx" highlightRanges={[8]}>
+    {`// app/routes/rooms.tsx
+export default function () {
+  return (
+    <>
+      <h1>Comet Rooms</h1>
+      <div>
+        <div>{/* Room list*/}</div>
+        <Outlet />
+      </div>
+    </>
+  );
+}
+`}
   </Code>
 );
 
 const dataLoading = (
   <Code language="tsx" highlightRanges={[[5, 8], 11]}>
-    {`// app/routes/rooms/index.tsx
+    {`// app/routes/rooms/$roomId.tsx
 import { json, useLoaderData } from "remix";
 import type { LoaderFunction } from "remix";
 
-export const loader: LoaderFunction = async ({ request }) =>  {
-  const rooms = await getRooms();
-  return json({ rooms });
+export const loader: LoaderFunction = async ({ request, params }) =>  {
+  const room = await getRoom(params.roomId);
+  return json({ room });
 }
 
 export default function() {
-  const { rooms } = useLoaderData();
+  const { room } = useLoaderData();
   return (
-    <ul>
-      {/* display some rooms */}
-    </ul>
+    <div>
+      {/* display room */}
+    </div>
   );
 }`}
   </Code>
@@ -143,7 +154,7 @@ export const action:Action = ({ request, params }) => {
     roomId: params.roomId,
     date: form.get("date"),
   });
-  return redirect("/rooms");
+  return redirect(\`/rooms/\${params.roomId}\`);
 }
 
 export default () => (
@@ -169,7 +180,7 @@ export default () => (
 
 const error = (
   <Code language="tsx">
-    {`// app/routes/rooms/$roomId/index.tsx
+    {`// app/routes/rooms/$roomId.tsx
 export const ErrorBoundary = () => {
   const { roomId } = useParams();
   return (
