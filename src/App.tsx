@@ -39,8 +39,7 @@ const App = () => {
       <RemixPresentation />
       <Myself /> {/* TODO: talk about comet */}
       <RemixQuote />
-      <RemixStartProject />
-      <RemixProjectStructure />
+      {/* <RemixProjectStructure /> */}
       <RoutesAPI />
       <FrontEnd />
       <RemixSummary />

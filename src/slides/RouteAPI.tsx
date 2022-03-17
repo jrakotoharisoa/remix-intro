@@ -1,6 +1,5 @@
 import { Appear, Heading, Text } from 'spectacle';
 import { Code } from '../theme/CodePane';
-import { Quote } from '../theme/Quote';
 import { CenteredSlide } from '../theme/Slide';
 import blank from '../images/blank.png';
 import index from '../images/index.png';

@@ -7,7 +7,7 @@ export const FrontEnd = () => (
     <CenteredSlide>
       <Heading>💡 Enable Javascript now</Heading>
     </CenteredSlide>
-    <CenteredSlide>
+    {/* <CenteredSlide>
       <div className="w-2/3">
         <Code language="tsx">{`// entry.client.tsx
 import ReactDOM from "react-dom";
@@ -15,7 +15,7 @@ import Remix from "@remix-run/react/browser";
 
 ReactDOM.hydrate(<Remix />, document);`}</Code>
       </div>
-    </CenteredSlide>
+    </CenteredSlide> */}
     <CenteredSlide>
       <Heading color="blue">{'<Link />'}</Heading>
       <div className="w-2/3">

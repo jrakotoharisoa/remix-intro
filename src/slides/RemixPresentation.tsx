@@ -1,14 +1,14 @@
-import { FlexBox, Heading, Text } from 'spectacle';
+import { Appear, FlexBox, Grid, Heading, Text } from 'spectacle';
 import helloKent from '../images/hello-kent.gif';
 import MJ from '../images/michael_jackson.jpeg';
 import RF from '../images/ryan_florence.jpeg';
-import { Quote } from '../theme/Quote';
+import { Code } from '../theme/CodePane';
 import { CenteredSlide } from '../theme/Slide';
 
 export const RemixPresentation = () => {
   return (
     <>
-      <TransitionalApp />
+      <WhatIsIt />
       <History />
     </>
   );
@@ -43,16 +43,47 @@ const History = () => (
   </>
 );
 
-const TransitionalApp = () => (
+// const TransitionalApp = () => (
+//   <CenteredSlide>
+//     <Quote source="https://kit.svelte.dev/">
+//       All the <span className="text-blue-400">SEO</span> and{' '}
+//       <span className="text-blue-400">progressive enhancement</span> of a{' '}
+//       <span className="text-blue-400">server-rendered app</span>, with the{' '}
+//       <span className="text-green-400">slick navigation</span> of an{' '}
+//       <span className="text-green-400">SPA</span>
+//     </Quote>
+//   </CenteredSlide>
+// );
+
+const WhatIsIt: React.FC = () => (
   <>
     <CenteredSlide>
-      <Quote source="https://kit.svelte.dev/">
-        All the <span className="text-blue-400">SEO</span> and{' '}
-        <span className="text-blue-400">progressive enhancement</span> of a{' '}
-        <span className="text-blue-400">server-rendered app</span>, with the{' '}
-        <span className="text-green-400">slick navigation</span> of an{' '}
-        <span className="text-green-400">SPA</span>
-      </Quote>
+      <Heading>What is Remix ?</Heading>
+    </CenteredSlide>
+
+    <CenteredSlide>
+      <Heading color="pink">Server Framework</Heading>
+      <Text>Server side rendering</Text>
+      <Text>Focus on UI not on model</Text>
+      <Text>Route = view + controller</Text>
+    </CenteredSlide>
+    <CenteredSlide>
+      <Heading color="yellow">Browser Framework</Heading>
+      <Text>Page hydratation with browser build</Text>
+      <Text>Benefit of SPA</Text>
+    </CenteredSlide>
+    <CenteredSlide>
+      <Heading color="green">Server HTTP Handler</Heading>
+      <Text textAlign="center">
+        Built on top of <span className="text-green-400">Web Fetch API</span>
+      </Text>
+      <Text>Run on non-Node.js server like Cloudflare workers</Text>
+    </CenteredSlide>
+    <CenteredSlide>
+      <Heading color="blue">Compiler</Heading>
+      <Text>Server HTTP Handler</Text>
+      <Text>Browser build</Text>
+      <Text>{'An asset manifest representing dependency graph'}</Text>
     </CenteredSlide>
   </>
 );
