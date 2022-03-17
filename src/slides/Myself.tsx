@@ -11,7 +11,7 @@ export const Myself = () => (
       const me = {
         name: 'Johann Rakotoharisoa',
         job: 'Software engineer',
-        company: 'Comet'
+        company: 'Comet Meetings'
         twitter: '@Joha2n',
         github: 'https://github.com/jrakotoharisoa'
       };

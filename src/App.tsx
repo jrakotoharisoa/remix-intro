@@ -3,7 +3,7 @@ import remixLogo from './images/remix-logo.svg';
 import { End } from './slides/End';
 import { FrontEnd } from './slides/FrontEnd';
 import { Myself } from './slides/Myself';
-import { RemixPresentation } from './slides/RemixPresentation';
+import { WhatIsIt, History } from './slides/RemixPresentation';
 import { RemixProjectStructure } from './slides/RemixProjectStrucutre';
 import { RemixQuote } from './slides/RemixQuote';
 import { RemixStartProject } from './slides/RemixStartProject';
@@ -36,9 +36,11 @@ const App = () => {
         </div>
         <Heading>Introduction</Heading>
       </CenteredSlide>
-      <RemixPresentation />
-      <Myself /> {/* TODO: talk about comet */}
       <RemixQuote />
+      {/* <WhatIsIt /> */}
+      <History />
+      <Myself /> {/* TODO: talk about comet */}
+      {/* <RemixStartProject /> */}
       {/* <RemixProjectStructure /> */}
       <RoutesAPI />
       <FrontEnd />

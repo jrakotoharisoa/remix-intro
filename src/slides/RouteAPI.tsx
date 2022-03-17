@@ -1,17 +1,13 @@
-import { Appear, Heading, Text } from 'spectacle';
+import { Heading, Text } from 'spectacle';
 import { Code } from '../theme/CodePane';
 import { CenteredSlide } from '../theme/Slide';
-import blank from '../images/blank.png';
-import index from '../images/index.png';
-import layout from '../images/layout.png';
-import form from '../images/form.png';
 
 export const RoutesAPI = () => (
   <>
     <CenteredSlide>
       <Heading class="yellow">ROUTES</Heading>
     </CenteredSlide>
-    <CenteredSlide>
+    {/* <CenteredSlide>
       <Heading color="yellow">ROUTER</Heading>
       <Appear>
         <Text textAlign="center">A file-system based router</Text>
@@ -22,8 +18,8 @@ export const RoutesAPI = () => (
       <Appear>
         <Text textAlign="center">Nested routes with nested layout</Text>
       </Appear>
-    </CenteredSlide>
-    <CenteredSlide>
+    </CenteredSlide> */}
+    {/* <CenteredSlide>
       <Text>https://comet-meetings.com/rooms/room-42</Text>
       <img src={blank} alt="blank" className="w-1/3" />
     </CenteredSlide>
@@ -51,7 +47,7 @@ export const RoutesAPI = () => (
       </Text>
       <Text color="yellow">app/routes/rooms/$roomId.tsx</Text>
       <img src={form} alt="form" className="w-1/3" />
-    </CenteredSlide>
+    </CenteredSlide> */}
     {/* <CenteredSlide>
       <div className="w-2/3">
         <Quote source="https://remix.run">Routes are their own API</Quote>
@@ -65,35 +61,35 @@ export const RoutesAPI = () => (
       <Text>Data loading</Text>
       {dataLoading}
     </CenteredSlide>
-    <CenteredSlide>
+    {/* <CenteredSlide>
       <Heading color="white">
         📍Co-location of <br /> Data loading and view
       </Heading>
-    </CenteredSlide>
-    <CenteredSlide>
+    </CenteredSlide> */}
+    {/* <CenteredSlide>
       <Heading color="white">
         Parallel loaders execution <br /> = ⚡️ Faster loading
       </Heading>
-    </CenteredSlide>
-    <CenteredSlide>
+    </CenteredSlide> */}
+    {/* <CenteredSlide>
       <Text>Metadata</Text>
       {meta}
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="white">SSR + Metadata = 🏆 SEO</Heading>
-    </CenteredSlide>
+    </CenteredSlide> */}
     {/* <CenteredSlide>
       <Text>Styles per route</Text>
       {css}
     </CenteredSlide> */}
 
-    <CenteredSlide>
+    {/* <CenteredSlide>
       <Text>Error handling</Text>
       {error}
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="white">💪 Resilient UI</Heading>
-    </CenteredSlide>
+    </CenteredSlide> */}
     <CenteredSlide>
       <Text>Data writing</Text>
       {dataWriting}
@@ -105,18 +101,10 @@ export const RoutesAPI = () => (
 );
 
 const view = (
-  <Code language="tsx" highlightRanges={[8]}>
-    {`// app/routes/rooms.tsx
+  <Code language="tsx">
+    {`// app/routes/Hello.tsx
 export default function () {
-  return (
-    <>
-      <h1>Comet Rooms</h1>
-      <div>
-        <div>{/* Room list*/}</div>
-        <Outlet />
-      </div>
-    </>
-  );
+  return <h1>Hello Devoxx !</h1>;
 }
 `}
   </Code>
@@ -145,7 +133,13 @@ export default function() {
 );
 
 const dataWriting = (
-  <Code language="tsx" highlightRanges={[[12, 15], 3, [4, 7], 8]}>
+  <Code
+    language="tsx"
+    highlightRanges={[
+      [12, 15],
+      [2, 9],
+    ]}
+  >
     {`// app/routes/rooms/$roomId/book.tsx 
 export const action:Action = ({ request, params }) => {
   const form = await request.formData();
@@ -177,35 +171,35 @@ export default () => (
 //   </Code>
 // );
 
-const error = (
-  <Code language="tsx">
-    {`// app/routes/rooms/$roomId.tsx
-export const ErrorBoundary = () => {
-  const { roomId } = useParams();
-  return (
-    <div className="error-container">
-      {\`Can't find \${roomId}. Sorry.\`}
-    </div>
-  );
-}>
-  `}
-  </Code>
-);
-const meta = (
-  <Code language="tsx">
-    {`// app/routes/rooms/$roomId/index.tsx
-import type { MetaFunction } from "remix";
+// const error = (
+//   <Code language="tsx">
+//     {`// app/routes/rooms/$roomId.tsx
+// export const ErrorBoundary = () => {
+//   const { roomId } = useParams();
+//   return (
+//     <div className="error-container">
+//       {\`Can't find \${roomId}. Sorry.\`}
+//     </div>
+//   );
+// }>
+//   `}
+//   </Code>
+// );
+// const meta = (
+//   <Code language="tsx">
+//     {`// app/routes/rooms/$roomId/index.tsx
+// import type { MetaFunction } from "remix";
 
-export const meta: MetaFunction = ({ data }: { data: LoaderData | undefined; }) => {
-  if(!data) {
-    return;
-  }
+// export const meta: MetaFunction = ({ data }: { data: LoaderData | undefined; }) => {
+//   if(!data) {
+//     return;
+//   }
 
-  return {
-    title: \`Room \${data.room.name}\`,
-    description: \`Description of the \${data.room.name} room\`,
-  };
-};
-  `}
-  </Code>
-);
+//   return {
+//     title: \`Room \${data.room.name}\`,
+//     description: \`Description of the \${data.room.name} room\`,
+//   };
+// };
+//   `}
+//   </Code>
+// );

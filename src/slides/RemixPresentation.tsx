@@ -5,16 +5,7 @@ import RF from '../images/ryan_florence.jpeg';
 import { Code } from '../theme/CodePane';
 import { CenteredSlide } from '../theme/Slide';
 
-export const RemixPresentation = () => {
-  return (
-    <>
-      <WhatIsIt />
-      <History />
-    </>
-  );
-};
-
-const History = () => (
+export const History = () => (
   <>
     <CenteredSlide>
       <Heading>
@@ -55,22 +46,17 @@ const History = () => (
 //   </CenteredSlide>
 // );
 
-const WhatIsIt: React.FC = () => (
+export const WhatIsIt: React.FC = () => (
   <>
     <CenteredSlide>
       <Heading>What is Remix ?</Heading>
     </CenteredSlide>
 
     <CenteredSlide>
-      <Heading color="pink">Server Framework</Heading>
-      <Text>Server side rendering</Text>
-      <Text>Focus on UI not on model</Text>
-      <Text>Route = view + controller</Text>
-    </CenteredSlide>
-    <CenteredSlide>
-      <Heading color="yellow">Browser Framework</Heading>
-      <Text>Page hydratation with browser build</Text>
-      <Text>Benefit of SPA</Text>
+      <Heading color="blue">Compiler</Heading>
+      <Text>Server HTTP Handler</Text>
+      <Text>Browser build</Text>
+      <Text>{'An asset manifest representing dependency graph'}</Text>
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="green">Server HTTP Handler</Heading>
@@ -80,10 +66,15 @@ const WhatIsIt: React.FC = () => (
       <Text>Run on non-Node.js server like Cloudflare workers</Text>
     </CenteredSlide>
     <CenteredSlide>
-      <Heading color="blue">Compiler</Heading>
-      <Text>Server HTTP Handler</Text>
-      <Text>Browser build</Text>
-      <Text>{'An asset manifest representing dependency graph'}</Text>
+      <Heading color="pink">Server Framework</Heading>
+      <Text>Route = view + controller</Text>
+      <Text>Focus on UI not on model</Text>
+      <Text>Server side rendering</Text>
+    </CenteredSlide>
+    <CenteredSlide>
+      <Heading color="yellow">Browser Framework</Heading>
+      <Text>Page hydratation with browser build</Text>
+      <Text>Benefit of SPA</Text>
     </CenteredSlide>
   </>
 );

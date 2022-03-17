@@ -94,22 +94,7 @@ function RoomEdit() {
           {` idle → submitting → loading → idle`}
         </Code>
       </div>
-      <div className="w-2/3">
-        <Appear>
-          <Code language="tsx">{`function SubmitButton() {
-  const transition = useTransition();
 
-  const text =
-    transition.state === "submitting"
-      ? "Saving..."
-      : transition.state === "loading"
-      ? "Saved!"
-      : "Go";
-
-  return <button type="submit">{text}</button>;
-        `}</Code>
-        </Appear>
-      </div>
       <Appear>
         <Heading color="red" fontSize="40px">
           Handled race conditions on resubmission 🏎
