@@ -53,11 +53,11 @@ export const RoutesAPI = () => (
       <Text color="yellow">app/routes/rooms/$roomId.tsx</Text>
       <img src={form} alt="form" className="w-1/3" />
     </CenteredSlide>
-    <CenteredSlide>
+    {/* <CenteredSlide>
       <div className="w-2/3">
         <Quote source="https://remix.run">Routes are their own API</Quote>
       </div>
-    </CenteredSlide>
+    </CenteredSlide> */}
     <CenteredSlide>
       <Text>View</Text>
       <div className="w-2/3">{view}</div>

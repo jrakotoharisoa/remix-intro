@@ -36,9 +36,9 @@ const App = () => {
         </div>
         <Heading>Introduction</Heading>
       </CenteredSlide>
-      <RemixQuote />
       <RemixPresentation />
       <Myself /> {/* TODO: talk about comet */}
+      <RemixQuote />
       <RemixStartProject />
       <RemixProjectStructure />
       <RoutesAPI />
