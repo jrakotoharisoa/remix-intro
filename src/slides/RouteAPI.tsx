@@ -62,7 +62,7 @@ export const RoutesAPI = () => (
     </CenteredSlide>
     <CenteredSlide>
       <Text>Data loading</Text>
-      {dataLoading}
+      <div className="w-3/4">{dataLoading}</div>
     </CenteredSlide>
     {/* <CenteredSlide>
       <Heading color="white">
@@ -95,7 +95,7 @@ export const RoutesAPI = () => (
     </CenteredSlide> */}
     <CenteredSlide>
       <Text>Data writing</Text>
-      {dataWriting}
+      <div className="w-2/3">{dataWriting}</div>
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="white">↗️ Progressive enhancement</Heading>
@@ -122,12 +122,9 @@ export default function () {
 );
 
 const dataLoading = (
-  <Code language="tsx" highlightRanges={[[5, 8], 11]}>
+  <Code language="tsx" highlightRanges={[[2, 5], 8]}>
     {`// app/routes/rooms/$roomId.tsx
-import { json, useLoaderData } from "remix";
-import type { LoaderFunction } from "remix";
-
-export const loader: LoaderFunction = async ({ request, params }) =>  {
+export const loader: LoaderFunction = async ({ request, params }) => {
   const room = await getRoom(params.roomId);
   return json({ room });
 }
@@ -135,9 +132,7 @@ export const loader: LoaderFunction = async ({ request, params }) =>  {
 export default function() {
   const { room } = useLoaderData();
   return (
-    <div>
-      {/* display room */}
-    </div>
+    <div>{/* display room */}</div>
   );
 }`}
   </Code>
@@ -152,7 +147,7 @@ const dataWriting = (
     ]}
   >
     {`// app/routes/rooms/$roomId/book.tsx 
-export const action:Action = ({ request, params }) => {
+export const action:ActionFunction = ({ request, params }) => {
   const form = await request.formData();
   await book({
     roomId: params.roomId,
