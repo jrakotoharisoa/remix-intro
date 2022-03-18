@@ -1,12 +1,11 @@
-import { Deck, Heading } from 'spectacle';
+import { Deck } from 'spectacle';
 import remixLogo from './images/remix-logo.svg';
 import { End } from './slides/End';
 import { FrontEnd } from './slides/FrontEnd';
 import { Myself } from './slides/Myself';
-import { History } from './slides/RemixPresentation';
-import { RemixQuote } from './slides/RemixQuote';
 import { RemixSummary } from './slides/RemixSummary';
 import { RoutesAPI } from './slides/RouteAPI';
+import { Web } from './slides/Web';
 import { theme } from './theme/config';
 import { CenteredSlide } from './theme/Slide';
 import { Template } from './theme/Template';
@@ -33,9 +32,10 @@ const App = () => {
           <img width="800" src={remixLogo} alt="remix logo" />
         </div>
       </CenteredSlide>
-      <RemixQuote />
+      <Web />
+      {/* <RemixQuote /> */}
       {/* <WhatIsIt /> */}
-      <History />
+      {/* <History /> */}
       <Myself /> {/* TODO: talk about comet */}
       {/* <RemixStartProject /> */}
       {/* <RemixProjectStructure /> */}

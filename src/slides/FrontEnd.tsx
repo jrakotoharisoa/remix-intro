@@ -1,4 +1,4 @@
-import { Appear, Heading } from 'spectacle';
+import { Appear, Grid, Heading, Text } from 'spectacle';
 import { Code } from '../theme/CodePane';
 import { CenteredSlide } from '../theme/Slide';
 
@@ -49,6 +49,16 @@ ReactDOM.hydrate(<Remix />, document);`}</Code>
       <Heading color="green">Remix call loader and update UI</Heading>
     </CenteredSlide>
     <CenteredSlide>
+      <Heading color="yellow">Other cool stuff</Heading>
+      <Grid gridTemplateColumns="1fr 1fr">
+        <Text textAlign="center">Error handling by route</Text>
+        <Text textAlign="center">Metadata by route</Text>
+        <Text textAlign="center">Optimistic UI</Text>
+        <Text textAlign="center">User sessions</Text>
+      </Grid>
+      <Text textAlign="center">etc.</Text>
+    </CenteredSlide>
+    {/* <CenteredSlide>
       <Heading>
         Modern UX with <span className="text-blue-400">useTransition()</span>
       </Heading>
@@ -100,6 +110,6 @@ function RoomEdit() {
           Handled race conditions on resubmission 🏎
         </Heading>
       </Appear>
-    </CenteredSlide>
+    </CenteredSlide> */}
   </>
 );

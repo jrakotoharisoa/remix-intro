@@ -34,18 +34,6 @@ export const History = () => (
   </>
 );
 
-// const TransitionalApp = () => (
-//   <CenteredSlide>
-//     <Quote source="https://kit.svelte.dev/">
-//       All the <span className="text-blue-400">SEO</span> and{' '}
-//       <span className="text-blue-400">progressive enhancement</span> of a{' '}
-//       <span className="text-blue-400">server-rendered app</span>, with the{' '}
-//       <span className="text-green-400">slick navigation</span> of an{' '}
-//       <span className="text-green-400">SPA</span>
-//     </Quote>
-//   </CenteredSlide>
-// );
-
 export const WhatIsIt: React.FC = () => (
   <>
     <CenteredSlide>

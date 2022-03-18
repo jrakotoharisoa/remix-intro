@@ -1,4 +1,4 @@
-import { Heading } from 'spectacle';
+import { Appear, Box, FlexBox, Heading, Text } from 'spectacle';
 import { CenteredSlide } from '../theme/Slide';
 
 type BadgeType = 'UI' | 'WEB' | 'UX';
@@ -27,10 +27,25 @@ export const Badge: React.FC<{
 };
 
 export const RemixSummary = () => (
-  <CenteredSlide>
-    <Heading>Remix is</Heading>
-    <Badge type="UI" />
-    <Badge type="UX" />
-    <Badge type="WEB" />
-  </CenteredSlide>
+  <>
+    <CenteredSlide>
+      <Badge type="UI" />
+      <Badge type="UX" />
+      <Badge type="WEB" />
+    </CenteredSlide>
+    <CenteredSlide>
+      <FlexBox>
+        <Box>
+          <Heading color="yellow">Try Remix</Heading>
+          <Text textAlign="center">https://remix.run/docs</Text>
+        </Box>
+        <Box>
+          <Appear>
+            <Heading color="green">Ready for production</Heading>
+            <Text textAlign="center">https://remix.run/blog/remix-stacks</Text>
+          </Appear>
+        </Box>
+      </FlexBox>
+    </CenteredSlide>
+  </>
 );

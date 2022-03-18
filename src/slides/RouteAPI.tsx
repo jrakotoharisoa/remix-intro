@@ -10,11 +10,16 @@ export const RoutesAPI = () => (
       <Heading class="yellow">ROUTES</Heading>
       <div className="w-2/3">
         <Appear>
-          <Code language="shell" showLineNumbers={false}>
-            {`/app/routes/rooms.tsx => /rooms
-/app/routes/rooms/$roomId.tsx => /rooms/:roomId`}
-          </Code>
+          <Text textAlign="center">Convention over configuration</Text>
         </Appear>
+      </div>
+    </CenteredSlide>
+    <CenteredSlide>
+      <div className="w-2/3">
+        <Code language="shell" showLineNumbers={false}>
+          {`/app/routes/rooms.tsx => /rooms
+/app/routes/rooms/$roomId.tsx => /rooms/:roomId`}
+        </Code>
       </div>
     </CenteredSlide>
     {/* <CenteredSlide>
@@ -40,12 +45,12 @@ export const RoutesAPI = () => (
       <div className="w-2/3">{view}</div>
     </CenteredSlide>
     <CenteredSlide>
-      <Text>https://comet-meetings.com/rooms/room-42</Text>
+      <Text>/rooms/room-42</Text>
       <img src={blank} alt="blank" className="w-1/3" />
     </CenteredSlide>
     <CenteredSlide>
       <Text>
-        https://comet-meetings.com<span className="text-green-400">/rooms</span>
+        <span className="text-green-400">/rooms</span>
         /room-42
       </Text>
       <Text color="green">app/routes/rooms.tsx</Text>
@@ -54,7 +59,7 @@ export const RoutesAPI = () => (
 
     <CenteredSlide>
       <Text>
-        https://comet-meetings.com/rooms
+        /rooms
         <span className="text-yellow-400">/room-42</span>
       </Text>
       <Text color="yellow">app/routes/rooms/$roomId.tsx</Text>
@@ -95,7 +100,7 @@ export const RoutesAPI = () => (
     </CenteredSlide> */}
     <CenteredSlide>
       <Text>Data writing</Text>
-      <div className="w-2/3">{dataWriting}</div>
+      <div className="w-3/4">{dataWriting}</div>
     </CenteredSlide>
     <CenteredSlide>
       <Heading color="white">↗️ Progressive enhancement</Heading>
@@ -104,7 +109,7 @@ export const RoutesAPI = () => (
 );
 
 const view = (
-  <Code language="tsx">
+  <Code language="tsx" highlightRanges={[8]}>
     {`// app/routes/rooms.tsx
 export default function () {
   return (
@@ -147,7 +152,7 @@ const dataWriting = (
     ]}
   >
     {`// app/routes/rooms/$roomId/book.tsx 
-export const action:ActionFunction = ({ request, params }) => {
+export const action:ActionFunction = async ({ request, params }) => {
   const form = await request.formData();
   await book({
     roomId: params.roomId,
