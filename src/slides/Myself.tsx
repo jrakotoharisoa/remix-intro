@@ -1,20 +1,22 @@
 import { Code } from '../theme/CodePane';
 import { Slide } from '../theme/Slide';
 import me from '../images/me.jpeg';
+import cometLieu from '../images/comet-lieu.jpg';
 
 export const Myself = () => (
   <Slide>
-    <div className="m-auto w-1/2 space-y-12 overflow-hidden text-center">
+    <img className="absolute h-full w-full" src={cometLieu} alt="comet" />
+    <div className="z-0 flex w-2/3 space-x-12 overflow-hidden p-5 text-center">
       <img className="m-auto w-48 rounded-full" src={me} alt="me" />
-      <Code language="typescript" showLineNumbers>
+      <Code language="typescript" showLineNumbers={false}>
         {`
-      const me = {
-        name: 'Johann Rakotoharisoa',
-        job: 'Software engineer',
-        company: 'Comet Meetings'
-        twitter: '@Joha2n',
-        github: 'https://github.com/jrakotoharisoa'
-      };
+const me = {
+  name: 'Johann Rakotoharisoa',
+  job: 'Software engineer',
+  company: 'Comet Meetings',
+  twitter: '@Joha2n',
+  github: 'https://github.com/jrakotoharisoa'
+};
       `}
       </Code>
     </div>

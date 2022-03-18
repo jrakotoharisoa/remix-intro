@@ -1,11 +1,21 @@
-import { Heading, Text } from 'spectacle';
+import { Appear, Heading, Text } from 'spectacle';
 import { Code } from '../theme/CodePane';
 import { CenteredSlide } from '../theme/Slide';
-
+import blank from '../images/blank.png';
+import layout from '../images/layout.png';
+import form from '../images/form.png';
 export const RoutesAPI = () => (
   <>
     <CenteredSlide>
       <Heading class="yellow">ROUTES</Heading>
+      <div className="w-2/3">
+        <Appear>
+          <Code language="shell" showLineNumbers={false}>
+            {`/app/routes/rooms.tsx => /rooms
+/app/routes/rooms/$roomId.tsx => /rooms/room-42`}
+          </Code>
+        </Appear>
+      </div>
     </CenteredSlide>
     {/* <CenteredSlide>
       <Heading color="yellow">ROUTER</Heading>
@@ -19,17 +29,19 @@ export const RoutesAPI = () => (
         <Text textAlign="center">Nested routes with nested layout</Text>
       </Appear>
     </CenteredSlide> */}
+
     {/* <CenteredSlide>
-      <Text>https://comet-meetings.com/rooms/room-42</Text>
-      <img src={blank} alt="blank" className="w-1/3" />
+      <div className="w-2/3">
+        <Quote source="https://remix.run">Routes are their own API</Quote>
+      </div>
+    </CenteredSlide> */}
+    <CenteredSlide>
+      <Text>View</Text>
+      <div className="w-2/3">{view}</div>
     </CenteredSlide>
     <CenteredSlide>
-      <Text>
-        <span className="text-blue-400">https://comet-meetings.com/</span>
-        rooms/room-42
-      </Text>
-      <Text color="blue">app/root.tsx</Text>
-      <img src={index} alt="index" className="w-1/3" />
+      <Text>https://comet-meetings.com/rooms/room-42</Text>
+      <img src={blank} alt="blank" className="w-1/3" />
     </CenteredSlide>
     <CenteredSlide>
       <Text>
@@ -47,15 +59,6 @@ export const RoutesAPI = () => (
       </Text>
       <Text color="yellow">app/routes/rooms/$roomId.tsx</Text>
       <img src={form} alt="form" className="w-1/3" />
-    </CenteredSlide> */}
-    {/* <CenteredSlide>
-      <div className="w-2/3">
-        <Quote source="https://remix.run">Routes are their own API</Quote>
-      </div>
-    </CenteredSlide> */}
-    <CenteredSlide>
-      <Text>View</Text>
-      <div className="w-2/3">{view}</div>
     </CenteredSlide>
     <CenteredSlide>
       <Text>Data loading</Text>
@@ -102,9 +105,17 @@ export const RoutesAPI = () => (
 
 const view = (
   <Code language="tsx">
-    {`// app/routes/Hello.tsx
+    {`// app/routes/rooms.tsx
 export default function () {
-  return <h1>Hello Devoxx !</h1>;
+  return (
+    <>
+      <h1>Comet Rooms</h1>
+      <div>
+        <div>{/* Rooms list*/}</div>
+        <div><Outlet /></div>
+      </div>
+    </>
+  );
 }
 `}
   </Code>
