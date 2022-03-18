@@ -12,7 +12,7 @@ export const RoutesAPI = () => (
         <Appear>
           <Code language="shell" showLineNumbers={false}>
             {`/app/routes/rooms.tsx => /rooms
-/app/routes/rooms/$roomId.tsx => /rooms/room-42`}
+/app/routes/rooms/$roomId.tsx => /rooms/:roomId`}
           </Code>
         </Appear>
       </div>

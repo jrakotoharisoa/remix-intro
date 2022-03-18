@@ -3,10 +3,8 @@ import remixLogo from './images/remix-logo.svg';
 import { End } from './slides/End';
 import { FrontEnd } from './slides/FrontEnd';
 import { Myself } from './slides/Myself';
-import { WhatIsIt, History } from './slides/RemixPresentation';
-import { RemixProjectStructure } from './slides/RemixProjectStrucutre';
+import { History } from './slides/RemixPresentation';
 import { RemixQuote } from './slides/RemixQuote';
-import { RemixStartProject } from './slides/RemixStartProject';
 import { RemixSummary } from './slides/RemixSummary';
 import { RoutesAPI } from './slides/RouteAPI';
 import { theme } from './theme/config';
@@ -17,7 +15,7 @@ const App = () => {
   return (
     <Deck
       theme={theme}
-      template={<Template />}
+      template={Template}
       transition={{
         from: {
           opacity: 0,
@@ -34,7 +32,6 @@ const App = () => {
         <div>
           <img width="800" src={remixLogo} alt="remix logo" />
         </div>
-        <Heading>Introduction</Heading>
       </CenteredSlide>
       <RemixQuote />
       {/* <WhatIsIt /> */}

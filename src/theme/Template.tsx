@@ -1,16 +1,8 @@
-import { Box, FlexBox, FullScreen, Progress } from 'spectacle';
+import { Box, FlexBox, Progress } from 'spectacle';
 
 export const Template = ({ slideNumber, numberOfSlides }: any) => (
-  <FlexBox
-    justifyContent="space-between"
-    position="absolute"
-    bottom={0}
-    width={1}
-  >
-    <Box padding="0 1em">
-      <FullScreen />
-    </Box>
-    <Box padding="1em">
+  <FlexBox justifyContent="center" position="absolute" bottom={0} width={1}>
+    <Box>
       <Progress />
     </Box>
   </FlexBox>
