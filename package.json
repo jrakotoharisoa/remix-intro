@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=8000 react-scripts start",
     "poststart": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build": "yarn build:css && react-scripts build",
     "build:css": "tailwindcss -i ./src/index.css -o ./public/tw.css",
