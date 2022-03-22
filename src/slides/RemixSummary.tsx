@@ -37,12 +37,18 @@ export const RemixSummary = () => (
       <FlexBox>
         <Box>
           <Heading color="yellow">Docs</Heading>
-          <Text textAlign="center">https://remix.run/docs</Text>
+          <Text textAlign="center">
+            <a href="https://remix.run/docs">https://remix.run/docs</a>
+          </Text>
         </Box>
         <Box>
           <Appear>
             <Heading color="green">Remix Stacks</Heading>
-            <Text textAlign="center">https://remix.run/blog/remix-stacks</Text>
+            <Text textAlign="center">
+              <a href="https://remix.run/blog/remix-stacks">
+                https://remix.run/blog/remix-stacks
+              </a>
+            </Text>
           </Appear>
         </Box>
       </FlexBox>

@@ -1,5 +1,6 @@
 import { Deck } from 'spectacle';
 import remixLogo from './images/remix-logo.svg';
+import { Demo } from './slides/Demo';
 import { End } from './slides/End';
 import { RemixSummary } from './slides/RemixSummary';
 import { Web } from './slides/Web';
@@ -38,6 +39,7 @@ const App = () => {
       {/* <RemixProjectStructure /> */}
       {/* <RoutesAPI /> */}
       {/* <FrontEnd /> */}
+      <Demo />
       <RemixSummary />
       <End />
     </Deck>
