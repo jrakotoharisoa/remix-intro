@@ -36,12 +36,12 @@ export const RemixSummary = () => (
     <CenteredSlide>
       <FlexBox>
         <Box>
-          <Heading color="yellow">Try Remix</Heading>
+          <Heading color="yellow">Docs</Heading>
           <Text textAlign="center">https://remix.run/docs</Text>
         </Box>
         <Box>
           <Appear>
-            <Heading color="green">Ready for production</Heading>
+            <Heading color="green">Remix Stacks</Heading>
             <Text textAlign="center">https://remix.run/blog/remix-stacks</Text>
           </Appear>
         </Box>
