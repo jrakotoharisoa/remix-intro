@@ -13,8 +13,8 @@ export const Web = () => (
         <Box>
           <Appear>
             <Heading color="green">Single-Page app</Heading>
-            <Text textAlign="center">Instant page transition</Text>
-            <Text textAlign="center">Dynamic page</Text>
+            <Text textAlign="center">No page reload</Text>
+            <Text textAlign="center">{'=> Instant transition'}</Text>
           </Appear>
         </Box>
       </FlexBox>
