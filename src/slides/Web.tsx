@@ -6,15 +6,17 @@ export const Web = () => (
     <CenteredSlide>
       <FlexBox>
         <Box>
-          <Heading color="blue">Multi-page app</Heading>
-          <Text textAlign="center">Sever side rendering</Text>
-          <Text textAlign="center">{'=> SEO + Fast page load'}</Text>
+          <Heading color="blue">Multi-Page application</Heading>
+          <Appear>
+            <Text textAlign="center">{'🔎 SEO'}</Text>
+          </Appear>
         </Box>
         <Box>
           <Appear>
-            <Heading color="green">Single-Page app</Heading>
-            <Text textAlign="center">No page reload</Text>
-            <Text textAlign="center">{'=> Instant transition'}</Text>
+            <Heading color="green">Single-Page application</Heading>
+          </Appear>
+          <Appear>
+            <Text textAlign="center">{'⚡️ Instant transition'}</Text>
           </Appear>
         </Box>
       </FlexBox>
@@ -30,7 +32,7 @@ export const Web = () => (
       </FlexBox>
     </CenteredSlide> */}
     <CenteredSlide>
-      <Heading color="pink">Difference</Heading>
+      <Heading color="pink">Differences</Heading>
       <Appear>
         <Text>Seamless server and browser runtime</Text>
       </Appear>
@@ -38,7 +40,7 @@ export const Web = () => (
         <Text>Progressive enhancement</Text>
       </Appear>
       <Appear>
-        <Text>Work with web fundamentals</Text>
+        <Text>Web fundamentals</Text>
       </Appear>
       <Appear>
         <Text>Run anywhere</Text>

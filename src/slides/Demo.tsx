@@ -5,6 +5,8 @@ export const Demo: React.FC = () => {
   return (
     <CenteredSlide>
       <Heading>
+        Remix Routes
+        <br />
         <a
           className="underline hover:text-blue-400"
           href="http://localhost:3000"
