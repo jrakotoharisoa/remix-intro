@@ -4,16 +4,17 @@ import { CenteredSlide } from '../theme/Slide';
 export const Web = () => (
   <>
     <CenteredSlide>
-      <FlexBox>
+      <FlexBox alignItems="flex-start">
         <Box>
-          <Heading color="blue">Multi-Page application</Heading>
+          <Heading color="blue">Multi-Page app</Heading>
           <Appear>
+            <Text textAlign="center">{'⚡️ Initial page load'}</Text>
             <Text textAlign="center">{'🔎 SEO'}</Text>
           </Appear>
         </Box>
         <Box>
           <Appear>
-            <Heading color="green">Single-Page application</Heading>
+            <Heading color="green">Single-Page app</Heading>
           </Appear>
           <Appear>
             <Text textAlign="center">{'⚡️ Instant transition'}</Text>
