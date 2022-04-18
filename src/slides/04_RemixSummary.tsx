@@ -29,7 +29,7 @@ export const Badge: React.FC<{
 export const RemixSummary = () => (
   <>
     <CenteredSlide>
-      <Heading color="yellow">Other cool stuff</Heading>
+      <Heading color="blue">Other cool stuff</Heading>
       <Grid gridTemplateColumns="1fr 1fr">
         <Text textAlign="center">Error handling by route</Text>
         <Text textAlign="center">Metadata by route</Text>

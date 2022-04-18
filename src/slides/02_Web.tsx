@@ -11,6 +11,7 @@ export const Web = () => (
       <Appear>
         <FlexBox>
           <Text textAlign="center">{'⚡️ Initial page load'}</Text>
+          <Text textAlign="center">{'🤭 Work without JS'}</Text>
           <Text textAlign="center">{'🔎 SEO'}</Text>
         </FlexBox>
       </Appear>
@@ -23,7 +24,7 @@ export const Web = () => (
       </Appear>
     </CenteredSlide>
     <CenteredSlide>
-      <Heading color="yellow">Transitional app</Heading>
+      <Heading color="yellow">✨ Transitional app</Heading>
       <img
         className="h-1/2"
         src={transitionalApp}
