@@ -1,7 +1,7 @@
 import { CenteredSlide } from '../theme/Slide';
 import remixLogo from '../images/remix-logo.svg';
 import { Text } from 'spectacle';
-import twitter from '../images/twitter.svg';
+import { twitter } from '../images/twitter';
 
 export const Intro = () => (
   <CenteredSlide>
@@ -9,13 +9,7 @@ export const Intro = () => (
       <img width="500" src={remixLogo} alt="remix logo" />
       <Text textAlign="center">
         Devoxx France 2022 <br />
-        <img
-          src={twitter}
-          className="inline"
-          alt="logo"
-          style={{ height: '50px' }}
-        />{' '}
-        @ J o h a 2 n
+        <span className="inline-flex items-center">{twitter} J o h a 2 n</span>
       </Text>
     </div>
   </CenteredSlide>

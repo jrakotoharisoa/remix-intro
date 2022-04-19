@@ -41,7 +41,7 @@ export const RemixSummary = () => (
     <CenteredSlide>
       <FlexBox>
         <Box>
-          <Heading color="yellow">Docs</Heading>
+          <Heading color="red">Docs</Heading>
           <Text textAlign="center">
             <a href="https://remix.run/docs">https://remix.run/docs</a>
           </Text>
