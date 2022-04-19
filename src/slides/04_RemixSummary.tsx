@@ -1,5 +1,5 @@
 import { Appear, Box, FlexBox, Grid, Heading, Text } from 'spectacle';
-import { CenteredSlide } from '../theme/Slide';
+import { CenteredSlide, TopSlide } from '../theme/Slide';
 
 type BadgeType = 'UI' | 'WEB' | 'UX';
 
@@ -28,16 +28,13 @@ export const Badge: React.FC<{
 
 export const RemixSummary = () => (
   <>
-    <CenteredSlide>
+    <TopSlide>
       <Heading color="blue">Other cool stuff</Heading>
-      <Grid gridTemplateColumns="1fr 1fr">
-        <Text textAlign="center">Error handling by route</Text>
-        <Text textAlign="center">Metadata by route</Text>
-        <Text textAlign="center">Optimistic UI</Text>
-        <Text textAlign="center">User sessions</Text>
-      </Grid>
+      <Text textAlign="center">Errors handling by route</Text>
+      <Text textAlign="center">Race conditions handling</Text>
+      <Text textAlign="center">Optimistic UI</Text>
       <Text textAlign="center">etc.</Text>
-    </CenteredSlide>
+    </TopSlide>
     <CenteredSlide>
       <FlexBox>
         <Box>

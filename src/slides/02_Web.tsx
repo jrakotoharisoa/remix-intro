@@ -1,11 +1,11 @@
-import { Appear, FlexBox, Heading, Text } from 'spectacle';
-import { CenteredSlide } from '../theme/Slide';
+import { Appear, FlexBox, Grid, Heading, Text } from 'spectacle';
+import { TopSlide } from '../theme/Slide';
 import mpa from '../images/schema-mp-app.svg';
 import spa from '../images/schema-sp-app.svg';
 import transitionalApp from '../images/schema-transitional-app.svg';
 export const Web = () => (
   <>
-    <CenteredSlide>
+    <TopSlide>
       <Heading color="blue">Multi-Page app</Heading>
       <img className="h-1/2" src={mpa} alt="multi page application schema" />
       <Appear>
@@ -15,15 +15,15 @@ export const Web = () => (
           <Text textAlign="center">{'🔎 SEO'}</Text>
         </FlexBox>
       </Appear>
-    </CenteredSlide>
-    <CenteredSlide>
+    </TopSlide>
+    <TopSlide>
       <Heading color="green">Single-Page app</Heading>
       <img className="h-1/2" src={spa} alt="single page application schema" />
       <Appear>
         <Text textAlign="center">{'⚡️ Instant transition'}</Text>
       </Appear>
-    </CenteredSlide>
-    <CenteredSlide>
+    </TopSlide>
+    <TopSlide>
       <Heading color="yellow">✨ Transitional app</Heading>
       <img
         className="h-1/2"
@@ -33,7 +33,7 @@ export const Web = () => (
       <Appear>
         <Text textAlign="center">{'👋 Hi Remix !'}</Text>
       </Appear>
-    </CenteredSlide>
+    </TopSlide>
     {/* <CenteredSlide>
       <FlexBox alignItems="flex-start">
         <Box>
@@ -63,20 +63,27 @@ export const Web = () => (
         <img src={nuxtjs} width="300px" alt="nuxt" />
       </FlexBox>
     </CenteredSlide> */}
-    <CenteredSlide>
+    <TopSlide>
       <Heading color="pink">Differences</Heading>
-      <Appear>
-        <Text>Seamless server and browser runtime</Text>
-      </Appear>
-      <Appear>
-        <Text>Progressive enhancement</Text>
-      </Appear>
-      <Appear>
-        <Text>Web fundamentals</Text>
-      </Appear>
-      <Appear>
-        <Text>Run anywhere</Text>
-      </Appear>
-    </CenteredSlide>
+      <Grid gridTemplateColumns="1fr 1fr">
+        <Appear>
+          <Text textAlign="center">
+            Seamless <br />
+            server and browser runtime
+          </Text>
+        </Appear>
+        <Appear>
+          <Text textAlign="center">
+            Progressive <br /> enhancement
+          </Text>
+        </Appear>
+        <Appear>
+          <Text textAlign="center">Web fundamentals</Text>
+        </Appear>
+        <Appear>
+          <Text textAlign="center">Run anywhere</Text>
+        </Appear>
+      </Grid>
+    </TopSlide>
   </>
 );

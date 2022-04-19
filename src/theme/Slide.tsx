@@ -17,3 +17,16 @@ export const CenteredSlide: React.FC = ({ children, ...props }) => (
     </FlexBox>
   </Slide>
 );
+
+export const TopSlide: React.FC = ({ children, ...props }) => (
+  <Slide {...props}>
+    <FlexBox
+      alignItems="center"
+      flexDirection="column"
+      justifyContent="flex-start"
+      height="100%"
+    >
+      {children}
+    </FlexBox>
+  </Slide>
+);
