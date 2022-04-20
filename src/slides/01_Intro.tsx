@@ -9,7 +9,9 @@ export const Intro = () => (
       <img width="500" src={remixLogo} alt="remix logo" />
       <Text textAlign="center">
         Devoxx France 2022 <br />
-        <span className="inline-flex items-center">{twitter} J o h a 2 n</span>
+        <span className="inline-flex items-center">
+          {twitter} @ J o h a 2 n
+        </span>
       </Text>
     </div>
   </CenteredSlide>
