@@ -1,4 +1,4 @@
-import { Appear, Box, FlexBox, Grid, Heading, Text } from 'spectacle';
+import { Appear, Box, FlexBox, Heading, Text } from 'spectacle';
 import { CenteredSlide, TopSlide } from '../theme/Slide';
 
 type BadgeType = 'UI' | 'WEB' | 'UX';
