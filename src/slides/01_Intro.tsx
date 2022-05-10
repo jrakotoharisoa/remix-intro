@@ -7,7 +7,7 @@ export const Intro = () => (
     <div>
       <img width="500" src={remixLogo} alt="remix logo" />
       <Text textAlign="center">
-        Devoxx France 2022 <br />
+        Introduction <br />
         <span className="inline-flex items-center text-3xl">@ J o h a 2 n</span>
       </Text>
     </div>
