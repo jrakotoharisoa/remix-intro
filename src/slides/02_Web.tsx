@@ -20,7 +20,7 @@ export const Web = () => (
       <Heading color="green">Single-Page app</Heading>
       <img className="h-1/2" src={spa} alt="single page application schema" />
       <Appear>
-        <Text textAlign="center">{'⚡️ Instant transition'}</Text>
+        <Text textAlign="center">{'⚡️ Smooth transition'}</Text>
       </Appear>
     </TopSlide>
     <TopSlide>
@@ -65,25 +65,22 @@ export const Web = () => (
     </CenteredSlide> */}
     <TopSlide>
       <Heading color="pink">Differences</Heading>
-      <Grid gridTemplateColumns="1fr 1fr">
+      {/* <Grid gridTemplateColumns="1fr 1fr"> */}
         <Appear>
           <Text textAlign="center">
-            Seamless <br />
+            Seamless 
             server and browser runtime
           </Text>
         </Appear>
         <Appear>
           <Text textAlign="center">
-            Progressive <br /> enhancement
+            Progressive enhancement
           </Text>
         </Appear>
         <Appear>
           <Text textAlign="center">Web fundamentals</Text>
         </Appear>
-        <Appear>
-          <Text textAlign="center">Run anywhere</Text>
-        </Appear>
-      </Grid>
+      {/* </Grid> */}
     </TopSlide>
   </>
 );
