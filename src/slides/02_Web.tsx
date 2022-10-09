@@ -1,4 +1,4 @@
-import { Appear, FlexBox, Grid, Heading, Text } from 'spectacle';
+import { Appear, FlexBox, Heading, Text } from 'spectacle';
 import { TopSlide } from '../theme/Slide';
 import mpa from '../images/schema-mp-app.svg';
 import spa from '../images/schema-sp-app.svg';
