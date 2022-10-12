@@ -36,24 +36,18 @@ export const RemixSummary = () => (
       <Text textAlign="center">etc.</Text>
     </TopSlide>
     <CenteredSlide>
-      <FlexBox>
-        <Box>
-          <Heading color="red">Docs</Heading>
-          <Text textAlign="center">
-            <a href="https://remix.run/docs">https://remix.run/docs</a>
-          </Text>
-        </Box>
-        <Box>
-          <Appear>
-            <Heading color="green">Remix Stacks</Heading>
-            <Text textAlign="center">
-              <a href="https://remix.run/blog/remix-stacks">
-                https://remix.run/blog/remix-stacks
-              </a>
-            </Text>
-          </Appear>
-        </Box>
-      </FlexBox>
+      <Heading textAlign="center">
+        <a href="https://remix.run/docs">
+        remix.run<span className="text-red-400">/docs</span>
+        </a>
+      </Heading>
+      <Appear>
+        <Heading textAlign="center">
+          <a href="https://remix.run/blog/remix-stacks">
+          remix.run/blog<span className="text-green-400">/remix-stacks</span>
+          </a>
+        </Heading>
+      </Appear>
     </CenteredSlide>
   </>
 );

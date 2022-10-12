@@ -20,7 +20,10 @@ export const Web = () => (
       <Heading color="green">Single-Page app</Heading>
       <img className="h-1/2" src={spa} alt="single page application schema" />
       <Appear>
+      <FlexBox>
         <Text textAlign="center">{'⚡️ Smooth transition'}</Text>
+        <Text textAlign="center">{'💾 Keep JS context'}</Text>
+        </FlexBox>
       </Appear>
     </TopSlide>
     <TopSlide>

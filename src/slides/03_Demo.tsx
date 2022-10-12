@@ -7,13 +7,14 @@ export const Demo: React.FC = () => {
       <Heading>
         Remix Routes
         <br />
+       
         <a
-          className="underline hover:text-blue-400"
+          className="hover:text-blue-400"
           href="http://localhost:3000"
           target="_blank"
           rel="noreferrer"
         >
-          Demo
+          💿 Demo
         </a>
       </Heading>
     </CenteredSlide>
